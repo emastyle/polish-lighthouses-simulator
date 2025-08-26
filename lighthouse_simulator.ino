@@ -60,6 +60,7 @@ const int programLengths[8] = {
 void setLamp(bool on) {
   if (ACTIVE_LOW) digitalWrite(lampPin, on ? LOW : HIGH);
   else            digitalWrite(lampPin, on ? HIGH : LOW);
+  digitalWrite(LED_BUILTIN, on ? HIGH : LOW);
 }
 
 // ---------------------------
